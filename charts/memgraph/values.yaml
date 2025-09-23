@@ -33,7 +33,8 @@ service:
   # NodePort would create a external port change port: between 30000-32767 accessible to all the nodes and Public IPs if not in a VPC
   # LoadBalancer is compabile with Cloud Providers on port: 80 without SSL redirected to the 7687
   type: ClusterIP
-
+  # Set to "None" to create a headless service
+  clusterIP: ""
   # Bolt Port
   enableBolt: true
   boltPort: 7687  # NOTE: Make sure to change port in probes if you change this value.

@@ -12,6 +12,7 @@ metadata:
   {{- end }}
 spec:
   type: {{ .Values.service.type }}
+  clusterIP: {{ .Values.service.clusterIP }}
   ports:
     {{- if .Values.service.enableBolt }}
     - port: {{ .Values.service.boltPort }}
